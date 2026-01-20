@@ -1,0 +1,6 @@
+2026-01-20 22:21:25,335 Worker rq:worker:ec3623bc256546dca78690be55ceb192 started with PID 248416, version 1.15.1
+2026-01-20 22:21:25,335 Subscribing to channel rq:pubsub:ec3623bc256546dca78690be55ceb192
+2026-01-20 22:21:25,337 *** Listening on home-jay-clones-testing-frappe-frappe-bench:short, home-jay-clones-testing-frappe-frappe-bench:default, home-jay-clones-testing-frappe-frappe-bench:long...
+2026-01-20 22:21:25,338 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:short
+2026-01-20 22:21:25,339 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:default
+2026-01-20 22:21:25,340 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:long
