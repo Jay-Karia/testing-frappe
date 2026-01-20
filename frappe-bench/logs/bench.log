@@ -1,0 +1,14 @@
+2026-01-20 13:55:41,194 DEBUG cd frappe-bench && uv venv env --seed --python python3
+2026-01-20 13:55:43,564 LOG Getting frappe
+2026-01-20 13:55:43,564 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-01-20 13:56:17,974 LOG Installing frappe
+2026-01-20 13:56:17,975 DEBUG cd /home/jay/clones/testing-frappe/frappe-bench && uv pip install --quiet --upgrade -e /home/jay/clones/testing-frappe/frappe-bench/apps/frappe  --python /home/jay/clones/testing-frappe/frappe-bench/env/bin/python
+2026-01-20 13:56:22,295 DEBUG cd /home/jay/clones/testing-frappe/frappe-bench/apps/frappe && yarn install --check-files
+2026-01-20 13:57:00,395 DEBUG cd /home/jay/clones/testing-frappe/frappe-bench && sudo supervisorctl restart frappe:
+2026-01-20 13:57:00,614 WARNING cd /home/jay/clones/testing-frappe/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 7
+2026-01-20 13:57:00,614 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2026-01-20 13:57:00,614 DEBUG cd frappe-bench && bench build
+2026-01-20 13:57:00,834 INFO /home/jay/miniconda3/bin/bench build
+2026-01-20 13:57:22,582 LOG setting up backups
+2026-01-20 13:57:22,598 LOG backups were set up
+2026-01-20 13:57:22,598 INFO Bench frappe-bench initialized
