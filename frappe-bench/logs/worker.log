@@ -1,0 +1,16 @@
+2026-01-20 14:01:55,959 Worker rq:worker:8f73e6227dcd4dbb89cbc24a371ba505 started with PID 88564, version 1.15.1
+2026-01-20 14:01:55,959 Subscribing to channel rq:pubsub:8f73e6227dcd4dbb89cbc24a371ba505
+2026-01-20 14:01:55,960 *** Listening on home-jay-clones-testing-frappe-frappe-bench:short, home-jay-clones-testing-frappe-frappe-bench:default, home-jay-clones-testing-frappe-frappe-bench:long...
+2026-01-20 14:01:55,961 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:short
+2026-01-20 14:01:55,962 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:default
+2026-01-20 14:01:55,963 Cleaning registries for queue: home-jay-clones-testing-frappe-frappe-bench:long
+2026-01-20 14:03:12,022 Worker 8f73e6227dcd4dbb89cbc24a371ba505 [PID 88564]: warm shut down requested
+2026-01-20 14:03:12,023 Unsubscribing from channel rq:pubsub:8f73e6227dcd4dbb89cbc24a371ba505
+2026-01-20 14:10:41,645 Worker rq:worker:ccbadb598d344541a96f20aed3b22a20 started with PID 94924, version 1.15.1
+2026-01-20 14:10:41,645 Subscribing to channel rq:pubsub:ccbadb598d344541a96f20aed3b22a20
+2026-01-20 14:10:41,646 *** Listening on home-jay-clones-testing-frappe-frappe-bench:short, home-jay-clones-testing-frappe-frappe-bench:default, home-jay-clones-testing-frappe-frappe-bench:long...
+2026-01-20 14:10:59,602 Worker ccbadb598d344541a96f20aed3b22a20 [PID 94924]: warm shut down requested
+2026-01-20 14:10:59,605 Unsubscribing from channel rq:pubsub:ccbadb598d344541a96f20aed3b22a20
+2026-01-20 14:11:12,546 Worker rq:worker:3d26c07721454c10b078705c4fb85d28 started with PID 95819, version 1.15.1
+2026-01-20 14:11:12,546 Subscribing to channel rq:pubsub:3d26c07721454c10b078705c4fb85d28
+2026-01-20 14:11:12,547 *** Listening on home-jay-clones-testing-frappe-frappe-bench:short, home-jay-clones-testing-frappe-frappe-bench:default, home-jay-clones-testing-frappe-frappe-bench:long...
