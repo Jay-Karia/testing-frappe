@@ -1,0 +1,186 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_ea6319e34539da5a --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _ea6319e34539da5a | /usr/bin/gzip >> ./linklite.localhost/private/backups/20260121_180001-linklite_localhost-database.sql.gz
+
+Backup Summary for linklite.localhost at 2026-01-21 18:00:02.053001
+Config  : ./linklite.localhost/private/backups/20260121_180001-linklite_localhost-site_config_backup.json 94.0B
+Database: ./linklite.localhost/private/backups/20260121_180001-linklite_localhost-database.sql.gz         246.1KiB
+Backup for Site linklite.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_ea6319e34539da5a --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _ea6319e34539da5a | /usr/bin/gzip >> ./linklite.localhost/private/backups/20260122_000001-linklite_localhost-database.sql.gz
+
+Backup Summary for linklite.localhost at 2026-01-22 00:00:02.279284
+Config  : ./linklite.localhost/private/backups/20260122_000001-linklite_localhost-site_config_backup.json 94.0B
+Database: ./linklite.localhost/private/backups/20260122_000001-linklite_localhost-database.sql.gz         251.8KiB
+Backup for Site linklite.localhost has been successfully completed
+Backup failed for Site linklite.localhost. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 845, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['linklite.localhost'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x7fa8f64bbec0>
+      exit_code = 0
+      rollback_callback = None
+      site = 'linklite.localhost'
+  File "apps/frappe/frappe/utils/backups.py", line 568, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      old_backup_metadata = False
+      rollback_callback = <frappe.utils.CallbackManager object at 0x7fa8f62c6950>
+  File "apps/frappe/frappe/utils/backups.py", line 605, in new_backup
+    odb = BackupGenerator(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      old_backup_metadata = False
+      rollback_callback = <frappe.utils.CallbackManager object at 0x7fa8f62c6950>
+  File "apps/frappe/frappe/utils/backups.py", line 89, in __init__
+    self.setup_backup_tables()
+      self = <frappe.utils.backups.BackupGenerator object at 0x7fa8f54a7770>
+      db_name = '_ea6319e34539da5a'
+      user = '_ea6319e34539da5a'
+      password = ********
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      db_socket = None
+      db_host = '127.0.0.1'
+      db_port = '3306'
+      db_type = 'mariadb'
+      backup_path_conf = None
+      ignore_conf = False
+      compress_files = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      verbose = True
+      old_backup_metadata = False
+      rollback_callback = <frappe.utils.CallbackManager object at 0x7fa8f62c6950>
+      site = 'linklite.localhost'
+  File "apps/frappe/frappe/utils/backups.py", line 121, in setup_backup_tables
+    existing_tables = frappe.db.get_tables()
+      self = <frappe.utils.backups.BackupGenerator object at 0x7fa8f54a7770>
+  File "apps/frappe/frappe/database/mariadb/database.py", line 491, in get_tables
+    .run(pluck=True)
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+      cached = True
+      to_query = True
+      tables = None
+      information_schema = <pypika.queries.Schema object at 0x7fa8f5360440>
+  File "apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+      query = 'SELECT `table_name` FROM `information_schema`.`tables` WHERE `table_schema`=%(param1)s'
+      args = ()
+      kwargs = {'pluck': True}
+      child_queries = []
+      params = {'param1': '_ea6319e34539da5a'}
+      execute_child_queries = <function patch_query_execute.<locals>.execute_child_queries at 0x7fa8f53349a0>
+      prepare_query = <function patch_query_execute.<locals>.prepare_query at 0x7fa8f5334a40>
+  File "apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+      query = 'SELECT `table_name` FROM `information_schema`.`tables` WHERE `table_schema`=%(param1)s'
+      values = {'param1': '_ea6319e34539da5a'}
+      as_dict = 0
+      as_list = 0
+      debug = False
+      ignore_ddl = 0
+      auto_commit = 0
+      update = None
+      explain = False
+      run = True
+      pluck = True
+      as_iterator = False
+  File "apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: MariadbConnection | PostgresConnection = self.get_connection()
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+  File "apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+  File "apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+  File "apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+      self = <frappe.database.mariadb.database.MariaDBDatabase object at 0x7fa8f54a7620>
+  File "env/lib/python3.13/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+      self = <pymysql.connections.Connection object at 0x7fa8f5360ad0>
+      user = '_ea6319e34539da5a'
+      password = ********
+      host = '127.0.0.1'
+      database = '_ea6319e34539da5a'
+      unix_socket = None
+      port = 3306
+      charset = 'utf8mb4'
+      collation = 'utf8mb4_unicode_ci'
+      sql_mode = None
+      read_default_file = None
+      conv = {<class 'bool'>: <function escape_bool at 0x7fa8f544a160>, <class 'int'>: <function escape_int at 0x7fa8f544a200>, <class 'float'>: <function escape_float at 0x7fa8f544a2a0>, <class 'str'>: <function escape_str at 0x7fa8f544a520>, <class 'bytes'>: <function escape_bytes at 0x7fa8f544a480>, <class 'tuple'>: <function escape_sequence at 0x7fa8f544a020>, <class 'list'>: <function escape_sequence at 0x7fa8f544a020>, <class 'set'>: <function escape_sequence at 0x7fa8f544a020>, <class 'frozenset'>: <function escape_sequence at 0x7fa8f544a020>, <class 'dict'>: <function escape_dict at 0x7fa8f5449f80>, <class 'NoneType'>: <function escape_None at 0x7fa8f544a5c0>, <class 'datetime.date'>: <function escape_date at 0x7fa8f544a840>, <class 'datetime.datetime'>: <function escape_datetime at 0x7fa8f544a7a0>, <class 'datetime.timedelta'>: <function escape_timedelta at 0x7fa8f544a660>, <class 'datetime.time'>: <function escape_time at 0x7fa8f544a700>, <class 'time.struct_time'>: <function escape_struc...
+      use_unicode = True
+      client_flag = 3842573
+      cursorclass = <class 'pymysql.cursors.Cursor'>
+      init_command = None
+      connect_timeout = 10
+      read_default_group = None
+      autocommit = False
+      local_infile = False
+      max_allowed_packet = 16777216
+      defer_connect = False
+      auth_plugin_map = None
+      read_timeout = None
+      write_timeout = None
+      bind_address = None
+      binary_prefix = False
+      program_name = None
+      server_public_key = ********
+      ssl = None
+      ssl_ca = None
+      ssl_cert = None
+      ssl_disabled = None
+      ssl_key = ********
+      ssl_key_password = ********
+      ssl_verify_cert = None
+      ssl_verify_identity = None
+      compress = None
+      named_pipe = None
+      passwd = ********
+      db = None
+  File "env/lib/python3.13/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+      self = <pymysql.connections.Connection object at 0x7fa8f5360ad0>
+      sock = None
+      kwargs = {}
+      exc = OperationalError(2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")

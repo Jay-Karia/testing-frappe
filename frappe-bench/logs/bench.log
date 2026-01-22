@@ -37,3 +37,6 @@
 2026-01-20 22:29:12,034 INFO /home/jay/miniconda3/bin/bench serve --port 8000
 2026-01-20 22:29:12,035 INFO /home/jay/miniconda3/bin/bench worker
 2026-01-20 22:29:12,088 INFO /home/jay/miniconda3/bin/bench schedule
+2026-01-21 18:00:01,117 INFO /home/jay/miniconda3/bin/bench --verbose --site all backup
+2026-01-22 00:00:00,990 INFO /home/jay/miniconda3/bin/bench --verbose --site all backup
+2026-01-22 12:00:00,903 INFO /home/jay/miniconda3/bin/bench --verbose --site all backup
